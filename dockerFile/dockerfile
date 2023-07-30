@@ -1,0 +1,6 @@
+FROM httpd:2.4
+COPY ./public-html/ /usr/local/apache2/htdocs/
+COPY ./virtualhost.conf conf/extra/httpd-vhosts.conf
+COPY ./my-httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY ./my-httpd-ssl.conf /usr/local/apache2/conf/extra/httpd-ssl.conf
+COPY ./keypublica/ /usr/local/apache2/conf/
